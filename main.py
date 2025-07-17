@@ -2,7 +2,7 @@
 
 
 def divide(a: str, b: str) -> float:
-    """
+    \"\"\
     Divide two numbers represented as strings and handle errors gracefully.
 
     Args:
@@ -11,7 +11,7 @@ def divide(a: str, b: str) -> float:
 
     Returns:
         float: The result of the division if successful, None otherwise.
-    """
+    \"\"\
 
     try:
         # Ensure inputs are integers
@@ -26,10 +26,7 @@ def divide(a: str, b: str) -> float:
         return num_a / num_b
 
     except ValueError as e:
-        raise ValueError(f'Inputs must be numeric strings: {e}')
-
-    except ZeroDivisionError:
-        raise ValueError('Cannot divide by zero.')
+        raise ValueError(f'Inputs must be numeric strings and denominator cannot be zero: {e}')
 
 
 if __name__ == '__main__':
