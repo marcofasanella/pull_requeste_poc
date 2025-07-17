@@ -2,11 +2,7 @@
 # This script demonstrates a simple division operation with error handling.
 
 def divide(a, b):
-    try:
-        return a / b
-    except ZeroDivisionError:
-        print('Cannot divide by zero.')
-        return None
+    return a / b
 
 if __name__ == '__main__':
     result = divide(10, 0)
