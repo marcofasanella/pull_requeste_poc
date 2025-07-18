@@ -17,13 +17,19 @@ def divide(a: str, b: str) -> float:
         num_a = int(a)
         num_b = int(b)
 
+        # Perform division
+        return num_a / num_b
+    except ValueError:
+        print(f"Invalid input: {a} or {b} is not a number.")
+        return None
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed.")
         return None
 
 
 if __name__ == '__main__':
-    try:
-        result = divide('22', '0')
-        if result is not None:
-            print(result)
-    except ValueError as e:
-        print(f'An error occurred: {e}')
+    result = divide('22', '0')
+    if result is not None:
+        print(result)
+    else:
+        print("Division could not be performed.")
