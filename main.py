@@ -1,5 +1,3 @@
-# This script demonstrates a simple division operation with proper error handling.
-
 import logging
 
 from typing import Optional
@@ -15,17 +13,26 @@ def divide(a: int, b: int) -> Optional[float]:
     Returns:
         Optional[float]: The result of the division if successful, None otherwise.
     """
+    logger = logging.getLogger(__name__)
+
     try:
         return a / b
     except ZeroDivisionError:
-        logging.error('Error: Division by zero is not allowed.')
+        logger.error('Error: Division by zero is not allowed.')
         return None
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO)
-    
+    logging.basicConfig(level=logging.ERROR)
+
     # Test division by zero
     result = divide(22, 0)
+    if result is not None:
+        print(result)
+    else:
+        print('Division could not be performed.')
+
+    # Test successful division
+    result = divide(10, 2)
     if result is not None:
         print(result)
     else:
