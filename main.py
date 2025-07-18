@@ -19,11 +19,6 @@ def divide(a: str, b: str) -> Optional[float]:
         num_a = int(a)
         num_b = int(b)
 
-        # Check for zero division error explicitly
-        if num_b == 0:
-            print('Error: Denominator cannot be zero.')
-            return None
-
         # Perform division
         return num_a / num_b
 
@@ -33,6 +28,6 @@ def divide(a: str, b: str) -> Optional[float]:
 
 
 if __name__ == '__main__':
-    result = divide('10', '0')
+    result = divide('1342, '0')
     if result is not None:
         print(result)
