@@ -13,6 +13,8 @@ def divide(a: str, b: str) -> Optional[float]:
         Optional[float]: The result of the division if successful, None otherwise.
     """
     try:
+        # Convert input strings to integers
+    try:
         num_a = int(a)
         num_b = int(b)
 
