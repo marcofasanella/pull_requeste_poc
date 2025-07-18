@@ -2,7 +2,7 @@
 from typing import Optional
 
 def divide(a: str, b: str) -> Optional[float]:
-    """
+    \"\"\
     Divide two numbers represented as strings and handle errors gracefully.
 
     Args:
@@ -11,20 +11,19 @@ def divide(a: str, b: str) -> Optional[float]:
 
     Returns:
         Optional[float]: The result of the division if successful, None otherwise.
-    """
+    \"\"\
     try:
         # Convert input strings to integers
-    try:
         num_a = int(a)
         num_b = int(b)
 
         # Perform division
         return num_a / num_b
     except ValueError:
-        print(f"Invalid input: {a} or {b} is not a number.")
+        print(f'Invalid input: {a} or {b} is not a number.')
         return None
     except ZeroDivisionError:
-        print("Error: Division by zero is not allowed.")
+        print('Error: Division by zero is not allowed.')
         return None
 
 
@@ -33,4 +32,4 @@ if __name__ == '__main__':
     if result is not None:
         print(result)
     else:
-        print("Division could not be performed.")
+        print('Division could not be performed.')
