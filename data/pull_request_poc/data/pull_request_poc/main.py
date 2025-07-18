@@ -18,7 +18,7 @@ def divide(a: int, b: int) -> Optional[float]:
     try:
         return a / b
     except ZeroDivisionError:
-        logging.error('Error: Division by zero is not allowed.')
+        logging.error('Error: Division by zero is not allowed. a=%d, b=%d', a, b)
         return None
 
 if __name__ == '__main__':
@@ -28,5 +28,12 @@ if __name__ == '__main__':
     result = divide(22, 0)
     if result is not None:
         print(result)
+    else:
+        print('Division could not be performed.')
+
+    # Test normal division
+    result = divide(10, 2)
+    if result is not None:
+        print(f'Success: {result}')
     else:
         print('Division could not be performed.')
