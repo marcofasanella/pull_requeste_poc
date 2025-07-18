@@ -15,7 +15,7 @@ def divide(a: int, b: int) -> Optional[float]:
 
     Returns:
         Optional[float]: The result of the division if successful, None otherwise.
-    """
+    """,
     try:
         return a / b
     except ZeroDivisionError:
