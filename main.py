@@ -4,7 +4,7 @@ from typing import Optional
 
 
 def divide(a: int, b: int) -> Optional[float]:
-    """
+    \"\"\
     Divide two numbers represented as integers and handle errors gracefully.
 
     Args:
@@ -13,10 +13,8 @@ def divide(a: int, b: int) -> Optional[float]:
 
     Returns:
         Optional[float]: The result of the division if successful, None otherwise.
-    """
-
+    \"\"\
     try:
-        # Perform division
         return a / b
     except ValueError:
         print(f'Invalid input: {a} or {b} is not an integer.')
