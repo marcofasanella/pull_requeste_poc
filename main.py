@@ -11,9 +11,6 @@ def divide(a: str, b: str) -> float:
     Returns:
         float: The result of the division if successful, None otherwise.
     """
-
-    try:
-        # Ensure inputs are integers
         num_a = int(a)
         num_b = int(b)
 
