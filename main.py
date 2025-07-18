@@ -1,6 +1,8 @@
+from typing import Optional
+
 # This script demonstrates a simple division operation with proper error handling.
 
-def divide(a: str, b: str) -> float:
+def divide(a: str, b: str) -> Optional[float]:
     """
     Divide two numbers represented as strings and handle errors gracefully.
 
@@ -9,7 +11,7 @@ def divide(a: str, b: str) -> float:
         b (str): The denominator as a string.
 
     Returns:
-        float: The result of the division if successful, None otherwise.
+        Optional[float]: The result of the division if successful, None otherwise.
     """
 
     try:
@@ -31,9 +33,6 @@ def divide(a: str, b: str) -> float:
 
 
 if __name__ == '__main__':
-    try:
-        result = divide(', '0')
-        if result is not None:
-            print(result)
-    except ValueError as e:
-        print(f'An error occurred: {e}')
+    result = divide('10', '0')
+    if result is not None:
+        print(result)
