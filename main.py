@@ -1,8 +1,7 @@
 # This script demonstrates a simple division operation with proper error handling.
 
-
 def divide(a: str, b: str) -> float:
-    \"\"\
+    """
     Divide two numbers represented as strings and handle errors gracefully.
 
     Args:
@@ -11,7 +10,7 @@ def divide(a: str, b: str) -> float:
 
     Returns:
         float: The result of the division if successful, None otherwise.
-    \"\"\
+    """
 
     try:
         # Ensure inputs are integers
@@ -20,13 +19,15 @@ def divide(a: str, b: str) -> float:
 
         # Check for zero division error explicitly
         if num_b == 0:
-            raise ValueError('Denominator cannot be zero.')
+            print('Error: Denominator cannot be zero.')
+            return None
 
         # Perform division
         return num_a / num_b
 
-    except ValueError as e:
-        raise ValueError(f'Inputs must be numeric strings and denominator cannot be zero: {e}')
+    except ValueError:
+        print('Error: Inputs must be numeric strings.')
+        return None
 
 
 if __name__ == '__main__':
