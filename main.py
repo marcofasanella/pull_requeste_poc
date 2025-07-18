@@ -32,7 +32,7 @@ def divide(a: str, b: str) -> float:
 
 if __name__ == '__main__':
     try:
-        result = divide('22', '0')
+        result = divide(', '0')
         if result is not None:
             print(result)
     except ValueError as e:
