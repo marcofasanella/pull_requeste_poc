@@ -25,7 +25,7 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     
     # Test division by zero
-    result = divide(22, 0)
+    result = divide("22", 0)
     if result is not None:
         print(result)
     else:
