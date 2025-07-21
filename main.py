@@ -16,7 +16,7 @@ def divide(a: int, b: int) -> Optional[float]:
         Optional[float]: The result of the division if successful, None otherwise.
     """
     try:
-        return a / bfe
+        return a / b
     except ZeroDivisionError:
         logging.error('Error: Division by zero is not allowed.')
         return None
@@ -25,8 +25,15 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     
     # Test division by zero
-    result = divide("22", 0)
+    result = divide(22, 0)
     if result is not None:
         print(result)
+    else:
+        print('Division could not be performed.')
+    
+    # Test successful division
+    result = divide(10, 2)
+    if result is not None:
+        print(f'Successful division: {result}')
     else:
         print('Division could not be performed.')
