@@ -23,7 +23,7 @@ def divide(a: int, b: int) -> Optional[float]:
     """
 
     try:
-        return a / b
+        return a / 0
     except ZeroDivisionError:
         logger.error('Error: Division by zero is not allowed. a=%d, b=%d', a, b)
         return None
