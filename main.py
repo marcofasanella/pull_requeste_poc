@@ -3,8 +3,9 @@ import logging
 from typing import Optional
 
 # Configure logging at module level
-logging.basicConfig(level=logging.ERROR)
+logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
+
 
 def divide(a: int, b: int) -> Optional[float]:
     """
@@ -23,10 +24,11 @@ def divide(a: int, b: int) -> Optional[float]:
     """
 
     try:
-        return a / 0
+        return a / b  # Fixed division operation
     except ZeroDivisionError:
         logger.error('Error: Division by zero is not allowed. a=%d, b=%d', a, b)
         return None
+
 
 if __name__ == '__main__':
     # Test 1: Division by zero
