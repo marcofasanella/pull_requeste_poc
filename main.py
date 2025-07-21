@@ -22,7 +22,8 @@ def divide(a: int, b: int) -> Optional[float]:
         (if non-integer values are passed) will propagate upwards.
     """
 
-return a / b
+    try:
+        return a / b
     except ZeroDivisionError:
         logger.error('Error: Division by zero is not allowed. a=%d, b=%d', a, b)
         return None
